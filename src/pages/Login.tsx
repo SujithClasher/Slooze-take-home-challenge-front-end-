@@ -43,8 +43,8 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center px-4 transition-colors">
-      <div className="max-w-md w-full">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4 sm:p-6 transition-colors">
+      <div className="w-full max-w-md">
         {/* Logo & Title */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-full mb-4">
@@ -59,27 +59,27 @@ const Login: React.FC = () => {
         </div>
 
         {/* Quick Start Guide */}
-        <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg">
-          <div className="flex items-start space-x-3">
+        <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg">
+          <div className="flex items-start space-x-2 sm:space-x-3">
             <div className="flex-shrink-0 mt-0.5">
-              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">💡</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xs sm:text-sm">💡</span>
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-sm font-semibold text-blue-900 dark:text-blue-200 mb-1">
+              <h3 className="text-xs sm:text-sm font-semibold text-blue-900 dark:text-blue-200 mb-0.5 sm:mb-1">
                 Quick Start Guide
               </h3>
-              <p className="text-xs text-blue-700 dark:text-blue-300">
-                Click on <strong>Manager Login</strong> or <strong>Store Keeper</strong> button below to auto-fill demo credentials, then click <strong>Sign In</strong>!
+              <p className="text-[11px] sm:text-xs text-blue-700 dark:text-blue-300 leading-tight">
+                Tap <strong>Manager</strong> or <strong>Store Keeper</strong> to auto-fill credentials, then tap <strong>Sign In</strong>!
               </p>
             </div>
           </div>
         </div>
 
         {/* Login Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 transition-colors">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-4 sm:p-6 md:p-8 transition-colors">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Error Alert */}
             {error && (
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg flex items-start">
@@ -141,22 +141,22 @@ const Login: React.FC = () => {
           </form>
 
           {/* Demo Credentials */}
-          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center mb-3">
-              Demo Accounts - Click to fill credentials
+          <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
+            <p className="text-xs text-gray-500 dark:text-gray-400 text-center mb-2 sm:mb-3">
+              Demo Accounts - Tap to fill
             </p>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               <button
                 type="button"
                 onClick={() => fillDemoCredentials('manager')}
-                className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 hover:bg-purple-200 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-lg text-sm font-medium transition-colors"
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-100 dark:bg-purple-900/30 hover:bg-purple-200 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-lg text-xs sm:text-sm font-medium transition-colors"
               >
                 Manager
               </button>
               <button
                 type="button"
                 onClick={() => fillDemoCredentials('storekeeper')}
-                className="px-4 py-2 bg-green-100 dark:bg-green-900/30 hover:bg-green-200 dark:hover:bg-green-900/50 text-green-700 dark:text-green-300 rounded-lg text-sm font-medium transition-colors"
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-green-100 dark:bg-green-900/30 hover:bg-green-200 dark:hover:bg-green-900/50 text-green-700 dark:text-green-300 rounded-lg text-xs sm:text-sm font-medium transition-colors"
               >
                 Store Keeper
               </button>
@@ -165,8 +165,8 @@ const Login: React.FC = () => {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="mt-4 sm:mt-6 text-center">
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
             Role-based access control system
           </p>
         </div>
